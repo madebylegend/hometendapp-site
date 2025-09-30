@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - HomeTend</title>
+    <meta name="description" content="HomeTend's Privacy Policy - How we collect, use, and protect your information when you use our AI-powered home maintenance management app.">
+    <meta name="author" content="HomeTend">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2D2D2D;
+            overflow-x: hidden;
+            background: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #FFFFFF 0%, #D4BFAA 100%);
+            color: #1A2A44;
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid #D4BFAA;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+            color: #1A2A44;
+            letter-spacing: -1px;
+        }
+
+        .page-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1A2A44;
+            font-weight: 400;
+        }
+
+        .effective-date {
+            font-size: 1rem;
+            color: #6C8E7B;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: rgba(108, 142, 123, 0.1);
+            border: 1px solid rgba(108, 142, 123, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h3 {
+            color: #1A2A44;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc a {
+            color: #6C8E7B;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.25rem 0;
+            display: block;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .toc a:hover {
+            color: #1A2A44;
+            background: rgba(108, 142, 123, 0.1);
+            padding-left: 0.5rem;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 4rem 0;
+            background: #FFFFFF;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(26, 42, 68, 0.08);
+            border: 1px solid rgba(212, 191, 170, 0.3);
+        }
+
+        /* Key Points Highlight */
+        .key-points {
+            background: linear-gradient(135deg, rgba(224, 122, 95, 0.1) 0%, rgba(108, 142, 123, 0.1) 100%);
+            border-left: 4px solid #E07A5F;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-points h3 {
+            color: #E07A5F;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .key-points ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .key-points li {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #1A2A44;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #2D2D2D;
+            font-weight: 300;
+        }
+
+        h2 {
+            color: #1A2A44;
+            font-size: 1.4rem;
+            margin: 2.5rem 0 1rem 0;
+            font-weight: 500;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(212, 191, 170, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            scroll-margin-top: 2rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .section-icon {
+            font-size: 1.2rem;
+            color: #6C8E7B;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #2D2D2D;
+            font-weight: 300;
+        }
+
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: #2D2D2D;
+            font-weight: 300;
+        }
+
+        strong {
+            color: #1A2A44;
+            font-weight: 500;
+        }
+
+        .email-link {
+            color: #E07A5F;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 2px 6px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .email-link:hover {
+            color: #d66a4f;
+            background: rgba(224, 122, 95, 0.1);
+            text-decoration: none;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: rgba(108, 142, 123, 0.1);
+            border: 1px solid rgba(108, 142, 123, 0.3);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .callout::before {
+            content: "ℹ️";
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .callout-content {
+            margin-left: 2rem;
+        }
+
+        .callout h4 {
+            color: #1A2A44;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Important Highlights */
+        .highlight {
+            background: rgba(224, 122, 95, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 500;
+            color: #1A2A44;
+        }
+
+        /* Data Collection Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(26, 42, 68, 0.1);
+        }
+
+        .data-table th {
+            background: #6C8E7B;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(212, 191, 170, 0.3);
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: rgba(108, 142, 123, 0.05);
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 191, 170, 0.3);
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 0.5rem;
+            background: white;
+            color: #1A2A44;
+            text-decoration: none;
+            border: 2px solid #D4BFAA;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button:hover {
+            border-color: #6C8E7B;
+            background: #6C8E7B;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .nav-button:focus {
+            outline: 3px solid rgba(108, 142, 123, 0.5);
+            outline-offset: 2px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #6C8E7B;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: #1A2A44;
+            transform: translateY(-2px);
+        }
+
+        /* Main Footer */
+        .main-footer {
+            background: #1A2A44;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .main-footer p {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 2rem;
+            }
+
+            .page-title {
+                font-size: 1.5rem;
+            }
+
+            .content-container {
+                padding: 2rem;
+                margin: 0 15px;
+            }
+
+            .nav-button {
+                display: block;
+                margin: 0.5rem 0;
+                width: 100%;
+            }
+
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+
+            .back-to-top {
+                bottom: 1rem;
+                right: 1rem;
+                width: 45px;
+                height: 45px;
+            }
+
+            .data-table {
+                font-size: 0.9rem;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 2rem 0;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .page-title {
+                font-size: 1.3rem;
+            }
+
+            .content-container {
+                padding: 1.5rem;
+            }
+
+            .callout {
+                padding: 1rem;
+            }
+
+            .callout-content {
+                margin-left: 1.5rem;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus styles for accessibility */
+        .nav-button:focus,
+        .email-link:focus,
+        .toc a:focus {
+            outline: 3px solid rgba(108, 142, 123, 0.5);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .content-container {
+                border: 2px solid #2D2D2D;
+            }
+            
+            .nav-button {
+                border: 2px solid #2D2D2D;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="logo">HomeTend</h1>
+                <h2 class="page-title">Privacy Policy</h2>
+                <p class="effective-date">Effective Date: September 23, 2025</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-container">
+                <div class="intro">
+                    HomeTend ("we," "our," or "us") is an AI-powered home maintenance management app that helps you keep your home in excellent condition. This Privacy Policy explains how we collect, use, and protect your information when you use our iOS app and related services.
+                </div>
+
+                <!-- Key Points Summary -->
+                <div class="key-points">
+                    <h3>🔑 Key Points</h3>
+                    <ul>
+                        <li>We never sell your personal data to third parties</li>
+                        <li>You can delete your account anytime with a 48-hour grace period</li>
+                        <li>All payments are handled securely by Apple</li>
+                        <li>Your home data stays private and encrypted</li>
+                        <li>We use AI to provide personalized maintenance recommendations</li>
+                        <li>Contact us anytime at support@hometendapp.com</li>
+                    </ul>
+                </div>
+
+                <!-- Table of Contents -->
+                <div class="toc">
+                    <h3>📋 Quick Navigation</h3>
+                    <ul>
+                        <li><a href="#information-we-collect">Information We Collect</a></li>
+                        <li><a href="#how-we-use">How We Use Information</a></li>
+                        <li><a href="#ai-processing">AI Processing</a></li>
+                        <li><a href="#sharing">Sharing of Information</a></li>
+                        <li><a href="#your-rights">Your Rights</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="#data-retention">Data Retention</a></li>
+                        <li><a href="#children">Children's Privacy</a></li>
+                        <li><a href="#international">International Users</a></li>
+                        <li><a href="#changes">Policy Changes</a></li>
+                    </ul>
+                </div>
+                
+                <h2 id="information-we-collect"><span class="section-icon">📊</span>Information We Collect</h2>
+                
+                <h3>Personal Information</h3>
+                <ul>
+                    <li><strong>Account Data:</strong> Email address, first name, and password (securely hashed)</li>
+                    <li><strong>Profile Information:</strong> DIY proficiency level, home details (year built, square footage, bedrooms, bathrooms, home type), zip code</li>
+                    <li><strong>Authentication Data:</strong> Login credentials and session information</li>
+                </ul>
+
+                <h3>Home Maintenance Data</h3>
+                <ul>
+                    <li><strong>Task Information:</strong> Maintenance tasks, schedules, completion status, notes, and photos</li>
+                    <li><strong>Home Documents:</strong> Manuals, receipts, and maintenance records you upload</li>
+                    <li><strong>Maintenance History:</strong> Completed tasks, patterns, and home score analytics</li>
+                    <li><strong>AI Interactions:</strong> Questions you ask our AI assistant and responses</li>
+                </ul>
+
+                <h3>Technical Information</h3>
+                <ul>
+                    <li><strong>Usage Analytics:</strong> App usage patterns, feature interactions, and performance data (anonymized)</li>
+                    <li><strong>Device Information:</strong> Device type, operating system version, and app version</li>
+                    <li><strong>Crash Reports:</strong> Error logs and diagnostic information to improve app stability</li>
+                    <li><strong>Weather Data:</strong> Location-based weather information for maintenance recommendations</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-content">
+                        <h4>Why We Need This Information</h4>
+                        <p>We only collect data that's essential for HomeTend to provide personalized home maintenance recommendations, track your progress, and improve the app experience. Your home data helps our AI understand your specific maintenance needs.</p>
+                    </div>
+                </div>
+
+                <h2 id="how-we-use"><span class="section-icon">⚙️</span>How We Use Your Information</h2>
+                <ul>
+                    <li><strong>App Functionality:</strong> Provide and improve the HomeTend app experience</li>
+                    <li><strong>Personalized Recommendations:</strong> Generate AI-powered maintenance plans based on your home profile</li>
+                    <li><strong>Task Management:</strong> Create, schedule, and track maintenance tasks</li>
+                    <li><strong>Weather Integration:</strong> Suggest weather-appropriate maintenance tasks</li>
+                    <li><strong>Progress Tracking:</strong> Calculate home maintenance scores and track completion patterns</li>
+                    <li><strong>Account Management:</strong> Enable secure login and account management</li>
+                    <li><strong>Support:</strong> Provide customer support and troubleshoot issues</li>
+                    <li><strong>App Improvement:</strong> Analyze usage patterns to enhance features and performance</li>
+                </ul>
+
+                <h2 id="ai-processing"><span class="section-icon">🤖</span>AI Processing</h2>
+                <p>HomeTend uses artificial intelligence to provide personalized maintenance recommendations. Here's how we handle your data for AI processing:</p>
+                
+                <ul>
+                    <li><strong>AI Service Providers:</strong> We use OpenAI's services to process your maintenance questions and generate personalized responses</li>
+                    <li><strong>Data Processing:</strong> Your home profile, task history, and questions are sent to AI services to generate relevant maintenance advice</li>
+                    <li><strong>No Training Data:</strong> Your personal data is not used to train AI models</li>
+                    <li><strong>Secure Transmission:</strong> All data sent to AI services is encrypted in transit</li>
+                    <li><strong>Data Retention:</strong> AI service providers may temporarily store your data for processing but do not retain it for training purposes</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-content">
+                        <h4>AI Privacy Protection</h4>
+                        <p>We ensure that your personal information is only used to provide you with relevant maintenance advice and is not used to improve AI models or shared with other users.</p>
+                    </div>
+                </div>
+
+                <h2 id="sharing"><span class="section-icon">🤝</span>Sharing of Information</h2>
+                
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Third Party</th>
+                            <th>Purpose</th>
+                            <th>Data Shared</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Supabase</strong></td>
+                            <td>Database hosting and user authentication</td>
+                            <td>Account data, home information, tasks</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OpenAI</strong></td>
+                            <td>AI-powered maintenance recommendations</td>
+                            <td>Home profile, task history, questions (anonymized)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apple</strong></td>
+                            <td>Payment processing and app distribution</td>
+                            <td>Payment information (we don't see this data)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Weather Services</strong></td>
+                            <td>Location-based weather data</td>
+                            <td>Zip code only (for weather recommendations)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <ul>
+                    <li><strong>No Sale of Data:</strong> <span class="highlight">We never sell your personal information to third parties.</span></li>
+                    <li><strong>Legal Requirements:</strong> We may disclose information if required by law or to protect our rights</li>
+                    <li><strong>Business Transfers:</strong> In the event of a merger or acquisition, user data may be transferred as part of the business assets</li>
+                </ul>
+
+                <h2 id="your-rights"><span class="section-icon">🛡️</span>Your Rights</h2>
+                <ul>
+                    <li><strong>Access:</strong> Request access to your personal data</li>
+                    <li><strong>Correction:</strong> Update or correct your information in the app settings</li>
+                    <li><strong>Deletion:</strong> Delete your account at any time: <span class="highlight">Settings → Account → Manage Account → Delete Account</span></li>
+                    <li><strong>Grace Period:</strong> After requesting deletion, you have a <span class="highlight">48-hour grace period</span> to cancel the request in the app or by emailing <a href="mailto:support@hometendapp.com" class="email-link">support@hometendapp.com</a></li>
+                    <li><strong>Data Export:</strong> Export your data in a portable format</li>
+                    <li><strong>Opt-out:</strong> Disable analytics and AI suggestions in app settings</li>
+                    <li><strong>Withdraw Consent:</strong> Withdraw consent for data processing at any time</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-content">
+                        <h4>Exercise Your Rights</h4>
+                        <p>To exercise any of these rights, contact us at <a href="mailto:support@hometendapp.com" class="email-link">support@hometendapp.com</a> and we'll respond within 2 business days. Most rights can also be exercised directly in the app settings.</p>
+                    </div>
+                </div>
+
+                <h2 id="security"><span class="section-icon">🔒</span>Security</h2>
+                <p>We implement comprehensive security measures to protect your information:</p>
+                <ul>
+                    <li><strong>Encryption:</strong> All data is encrypted in transit (TLS 1.3) and at rest (AES-256)</li>
+                    <li><strong>Database Security:</strong> Row Level Security (RLS) policies protect your data from unauthorized access</li>
+                    <li><strong>Authentication:</strong> Secure password hashing and session management</li>
+                    <li><strong>Access Controls:</strong> Strict access controls and regular security audits</li>
+                    <li><strong>Data Minimization:</strong> We only collect and retain data necessary for app functionality</li>
+                    <li><strong>Regular Updates:</strong> Continuous security updates and vulnerability assessments</li>
+                </ul>
+
+                <h2 id="data-retention"><span class="section-icon">📅</span>Data Retention</h2>
+                <ul>
+                    <li><strong>Active Accounts:</strong> We retain your data while your account is active</li>
+                    <li><strong>Account Deletion:</strong> Data is permanently deleted after a <span class="highlight">48-hour grace period</span> following deletion request</li>
+                    <li><strong>Inactive Accounts:</strong> Accounts inactive for 12 months are automatically deleted</li>
+                    <li><strong>Legal Requirements:</strong> Some data may be retained longer if required by law</li>
+                    <li><strong>Backup Data:</strong> Deleted data is removed from backups within 30 days</li>
+                </ul>
+
+                <h2 id="children"><span class="section-icon">👶</span>Children's Privacy</h2>
+                <p>HomeTend is designed for users of all ages, including children. We are committed to protecting the privacy of all our users, especially children under 13.</p>
+                
+                <ul>
+                    <li><strong>Age-Appropriate Content:</strong> Our app contains educational content about home maintenance that is suitable for all ages</li>
+                    <li><strong>Minimal Data Collection:</strong> We collect only the information necessary for app functionality</li>
+                    <li><strong>Parental Controls:</strong> Parents can disable data collection and AI features in app settings</li>
+                    <li><strong>No Personal Information from Children:</strong> We do not knowingly collect personal information from children under 13 without parental consent</li>
+                    <li><strong>Parental Rights:</strong> Parents can contact us at <a href="mailto:support@hometendapp.com" class="email-link">support@hometendapp.com</a> to review or delete their child's information</li>
+                </ul>
+
+                <div class="callout">
+                    <div class="callout-content">
+                        <h4>For Parents</h4>
+                        <p>If you believe your child has provided us with personal information without your consent, please contact us immediately. We will promptly delete such information upon verification.</p>
+                    </div>
+                </div>
+
+                <h2 id="international"><span class="section-icon">🌍</span>International Users</h2>
+                <p>If you are using HomeTend from outside the United States, please note that your information may be transferred to and processed in the United States. We ensure appropriate safeguards are in place to protect your data in accordance with applicable privacy laws.</p>
+
+                <h2 id="changes"><span class="section-icon">📝</span>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy to reflect changes in our practices or legal requirements. We will:</p>
+                <ul>
+                    <li>Post the updated policy on this page with a new "Effective Date"</li>
+                    <li>Notify you of significant changes through the app or email</li>
+                    <li>Obtain your consent for material changes where required by law</li>
+                </ul>
+
+                <div class="nav-links">
+                    <a href="/" class="nav-button">← Back to HomeTend</a>
+                    <a href="/terms-of-service" class="nav-button">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">↑</button>
+
+    <!-- Main Footer -->
+    <footer class="main-footer" role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 HomeTend. All rights reserved. | <a href="mailto:support@hometendapp.com" style="color: rgba(255, 255, 255, 0.8);">support@hometendapp.com</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Show/hide back to top button
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Smooth scroll for table of contents links
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
