@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeTend – AI-Powered Home Maintenance App | Never Miss Home Care Again</title>
+    <meta name="description" content="Download HomeTend for iOS - The AI-powered home maintenance app. Get personalized reminders, smart scheduling, and instant expert help. Perfect for new homeowners. Free 7-day trial.">
+    <meta name="keywords" content="home maintenance app, iOS home care, property management, maintenance reminders, new homeowner app, AI home assistant, home score tracker">
+    <meta name="author" content="HomeTend">
+    <meta property="og:title" content="HomeTend – Never Miss Home Maintenance Again">
+    <meta property="og:description" content="AI-powered home maintenance app with personalized reminders and expert guidance. Download now on iOS.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/og-image.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6C8E7B;
+            --secondary: #E07A5F;
+            --dark: #1A2A44;
+            --light: #D4BFAA;
+            --bg: #FFFFFF;
+            --text: #2D2D2D;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            overflow-x: hidden;
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFFFFF 0%, #D4BFAA 50%, #6C8E7B 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(108, 142, 123, 0.2), transparent 70%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--secondary) 0%, #d66a4f 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(224, 122, 95, 0.3);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text);
+            margin-bottom: 32px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .app-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--dark);
+            color: white;
+            padding: 18px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(26, 42, 68, 0.3);
+        }
+
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(26, 42, 68, 0.4);
+            background: #0f1a2e;
+        }
+
+        .trial-note {
+            font-size: 0.95rem;
+            color: var(--text);
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .trial-note strong {
+            color: var(--primary);
+        }
+
+        /* Phone Mockup */
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .phone-frame {
+            position: relative;
+            width: 320px;
+            height: 640px;
+            background: var(--dark);
+            border-radius: 45px;
+            padding: 14px;
+            box-shadow: 0 25px 70px rgba(26, 42, 68, 0.35);
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 25px;
+            background: var(--dark);
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 35px;
+            overflow: hidden;
+            background: white;
+            position: relative;
+        }
+
+        .screen-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #f5f5f5 0%, #e8e8e8 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .screen-placeholder svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+
+        .screen-placeholder p {
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text);
+            opacity: 0.8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(108, 142, 123, 0.05) 0%, rgba(212, 191, 170, 0.05) 100%);
+            padding: 40px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(108, 142, 123, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(26, 42, 68, 0.12);
+            border-color: var(--primary);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .feature-description {
+            color: var(--text);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(212, 191, 170, 0.1) 100%);
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 900px;
+            margin: 60px auto 0;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 48px;
+            border-radius: 20px;
+            border: 2px solid rgba(108, 142, 123, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            background: linear-gradient(135deg, var(--primary) 0%, #5a7a6a 100%);
+            border-color: var(--primary);
+            transform: scale(1.05);
+            color: white;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 48px rgba(108, 142, 123, 0.2);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--secondary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .pricing-plan {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .pricing-card.featured .pricing-plan {
+            color: white;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .pricing-price span {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .pricing-trial {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 32px 0;
+        }
+
+        .pricing-features li {
+            padding: 12px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .pricing-card.featured .pricing-features li::before {
+            color: white;
+        }
+
+        .pricing-cta {
+            display: block;
+            text-align: center;
+            background: var(--dark);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card.featured .pricing-cta {
+            background: white;
+            color: var(--dark);
+        }
+
+        .pricing-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(26, 42, 68, 0.3);
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .faq-item {
+            background: linear-gradient(135deg, rgba(108, 142, 123, 0.03) 0%, rgba(212, 191, 170, 0.03) 100%);
+            border: 1px solid rgba(108, 142, 123, 0.1);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(108, 142, 123, 0.1);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .faq-answer {
+            color: var(--text);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #5a7a6a 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .guarantee {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 16px 32px;
+            border-radius: 12px;
+            margin-top: 24px;
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Footer */
+        .footer-nav {
+            background: rgba(212, 191, 170, 0.1);
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--light);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .footer-links h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            display: block;
+            padding: 8px 0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(212, 191, 170, 0.3);
+            color: var(--text);
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .trial-note {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 60px 0 80px;
+            }
+
+            .phone-frame {
+                width: 280px;
+                height: 560px;
+            }
+
+            .cta-group {
+                flex-direction: column;
+            }
+
+            .app-store-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <span class="badge">🚀 Just Launched on iOS</span>
+                    <h1>Never Miss Home Maintenance Again</h1>
+                    <p class="hero-subtitle">AI-powered app that learns your home's unique needs and sends personalized reminders before problems become expensive repairs.</p>
+                    
+                    <div class="cta-group">
+                        <a href="https://apps.apple.com/us/app/hometend-home-maintenance/id6749637171" class="app-store-btn">
+                            <span>📱</span>
+                            Download on App Store
+                        </a>
+                    </div>
+
+                    <div class="trial-note">
+                        <span>✓</span>
+                        <span><strong>Free 7-day trial</strong> • Cancel anytime</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="screen-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: #6C8E7B;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                </svg>
+                                <p>Add your app screenshot here<br/>(home-screen.png)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Why New Homeowners Love HomeTend</h2>
+                <p class="section-subtitle">Everything you need to protect your investment and keep your home in perfect condition</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">💰</span>
+                    <h3 class="feature-title">Save Money on Repairs</h3>
+                    <p class="feature-description">Prevent expensive breakdowns with proactive maintenance. Our AI identifies potential issues early, helping you avoid costly emergency repairs.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🏠</span>
+                    <h3 class="feature-title">Track Your Home Score</h3>
+                    <p class="feature-description">See your home's health at a glance with our unique 0-100 scoring system. Complete tasks to improve your score and property value.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">🤖</span>
+                    <h3 class="feature-title">AI Expert Always Available</h3>
+                    <p class="feature-description">Get instant answers to "Should I fix this myself?" questions with step-by-step guidance tailored to your skill level.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">⏰</span>
+                    <h3 class="feature-title">Smart Seasonal Reminders</h3>
+                    <p class="feature-description">Never miss critical seasonal tasks. Weather-aware notifications send alerts at the perfect time for your location.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">📄</span>
+                    <h3 class="feature-title">Document Everything</h3>
+                    <p class="feature-description">Store receipts, manuals, and inspection reports in one place. Perfect for warranties, insurance claims, and resale value.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <span class="feature-icon">📊</span>
+                    <h3 class="feature-title">Personalized to Your Home</h3>
+                    <p class="feature-description">Tasks based on your home's age, size, location, and weather patterns. No generic checklists—real recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">Start with a free 7-day trial. Cancel anytime through your Apple ID settings.</p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card fade-in">
+                    <div class="pricing-plan">Monthly Plan</div>
+                    <div class="pricing-price">$4.99<span>/month</span></div>
+                    <div class="pricing-trial">7-day free trial • Cancel anytime</div>
+                    <ul class="pricing-features">
+                        <li>Unlimited maintenance tasks</li>
+                        <li>AI-powered recommendations</li>
+                        <li>Document storage & analysis</li>
+                        <li>Weather-based scheduling</li>
+                        <li>Home score tracking</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/hometend-home-maintenance/id6749637171" class="pricing-cta">Start Free Trial</a>
+                </div>
+
+                <div class="pricing-card featured fade-in">
+                    <span class="pricing-badge">BEST VALUE - Save 17%</span>
+                    <div class="pricing-plan">Annual Plan</div>
+                    <div class="pricing-price">$49.99<span>/year</span></div>
+                    <div class="pricing-trial">7-day free trial • No credit card required</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Monthly Plan</li>
+                        <li>Save $10 per year</li>
+                        <li>Unlimited document uploads</li>
+                        <li>Advanced analytics</li>
+                        <li>Multiple properties support</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/hometend-home-maintenance/id6749637171" class="pricing-cta">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about HomeTend</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">How does the free trial work?</div>
+                    <div class="faq-answer">Download the app and get full access to all features for 7 days—completely free. You'll need an Apple ID with a payment method to start the trial, but you won't be charged during the trial period. Cancel anytime through your Apple ID settings before the trial ends to avoid charges.</div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Is HomeTend really for new homeowners?</div>
+                    <div class="faq-answer">While we're perfect for new homeowners (especially those within the last 5 years), anyone can benefit from HomeTend. Our AI personalizes everything to your home's specific needs, whether it's brand new or 50 years old.</div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">How does the AI know my home's needs?</div>
+                    <div class="faq-answer">Simply tell us your home's age, size, type, and location during setup. Our AI combines this with weather data and maintenance best practices to create your personalized schedule. The more you use the app, the smarter it gets.</div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Can I use this for rental properties?</div>
+                    <div class="faq-answer">Absolutely! HomeTend supports multiple properties, making it perfect for landlords and property managers. Track maintenance across all your homes from one app.</div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">What if I need help or want to cancel?</div>
+                    <div class="faq-answer">We're here for you! Email support@hometendapp.com and we'll respond within 2 business days. You can cancel your subscription anytime through your Apple ID settings—no questions asked.</div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">Is my data secure?</div>
+                    <div class="faq-answer">Yes! All your data is encrypted in transit and at rest. We use bank-level security (AES-256 encryption) and never sell your personal information. You can delete your account and all data anytime.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container fade-in">
+            <h2>Ready to Protect Your Home Investment?</h2>
+            <p>Join early adopters who are already saving money on proactive home maintenance.</p>
+            <a href="https://apps.apple.com/us/app/hometend-home-maintenance/id6749637171" class="app-store-btn" style="background: white; color: var(--dark);">
+                <span>📱</span>
+                Download Now - Free 7-Day Trial
+            </a>
+            <div class="guarantee">
+                <span>✓</span>
+                <span>Risk-free trial • Cancel anytime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-nav">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>HomeTend</h3>
+                    <p>AI-powered home maintenance management for modern homeowners.</p>
+                    <p style="margin-top: 16px; font-size: 0.9rem;">
+                        <a href="mailto:support@hometendapp.com" style="color: var(--primary); text-decoration: none;">support@hometendapp.com</a>
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="https://apps.apple.com/us/app/hometend-home-maintenance/id6749637171">Download iOS App</a></li>
+                        <li><a href="#pricing">View Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 HomeTend. All rights reserved. | <a href="mailto:support@hometendapp.com" style="color: inherit;">support@hometendapp.com</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
